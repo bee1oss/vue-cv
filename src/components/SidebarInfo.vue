@@ -16,6 +16,8 @@
   };
 
   const skills: Skill[] = [
+    { name: 'Linux', level: 70 },
+    { name: 'Git', level: 85 },
     { name: 'JavaScript', level: 85 },
     { name: 'Node Js', level: 90 },
     { name: 'React', level: 80 },
@@ -39,11 +41,24 @@
     { name: 'Vue.js', icon: 'fab fa-vuejs' },
     { name: 'React', icon: 'fab fa-react' },
     { name: 'React Native (Expo)', icon: 'fab fa-react' },
+    { name: 'Node.js', icon: 'fab fa-node-js' },
     { name: 'Express.js', icon: 'fas fa-server' },
     { name: 'NestJS', icon: 'fas fa-cubes' },
-    { name: 'Laravel', icon: 'fas fa-terminal' }, // Pro ikon yerine alternatif
+    { name: 'Laravel', icon: 'fas fa-terminal' },
     { name: 'Spring Boot', icon: 'fas fa-leaf' },
     { name: 'Go Fiber', icon: 'fas fa-feather' },
+  ];
+
+  const websec = [
+    { name: 'Burp Suite', icon: 'fas fa-bug' },
+    { name: 'OWASP ZAP', icon: 'fas fa-shield-alt' },
+    { name: 'Nikto', icon: 'fas fa-search' },
+    { name: 'Nmap', icon: 'fas fa-network-wired' },
+    { name: 'SQLMap', icon: 'fas fa-database' },
+    { name: 'XSStrike', icon: 'fas fa-exclamation-triangle' },
+    { name: 'Hydra', icon: 'fas fa-user-secret' },
+    { name: 'Postman', icon: 'fas fa-paper-plane' },
+    { name: 'Gobuster', icon: 'fas fa-folder-open' },
   ];
 
   const databases = [
@@ -75,20 +90,25 @@
       </div>
     </div>
     <div class="info-item">
-      <h2>Veritabanlari</h2>
+      <h2>Veritabanları</h2>
       <p v-for="db in databases" :key="db.name"><i :class="db.icon"></i> {{ db.name }}</p>
-    </div>
-
-    <div class="info-item">
-      <h2>Diller</h2>
-      <p v-for="lang in languages" :key="lang.name">
-        <i class="fas fa-language"></i> {{ lang.name }} - {{ lang.level }}
-      </p>
     </div>
 
     <div class="info-item">
       <h2>Frameworks</h2>
       <p v-for="fram in frameworks" :key="fram.name"><i :class="fram.icon"></i> {{ fram.name }}</p>
+    </div>
+
+    <div class="info-item">
+      <h2>Güvenlik Araçları</h2>
+      <p v-for="sec in websec" :key="sec.name"><i :class="sec.icon"></i> {{ sec.name }}</p>
+    </div>
+
+    <div class="info-item">
+      <h2>Yabancı Diller</h2>
+      <p v-for="lang in languages" :key="lang.name">
+        <i class="fas fa-language"></i> {{ lang.name }} - {{ lang.level }}
+      </p>
     </div>
   </aside>
 </template>

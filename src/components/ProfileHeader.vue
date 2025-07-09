@@ -4,7 +4,7 @@
   const socialLinks = [
     { icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/begech-hajyyev-675887272/' },
     { icon: 'fab fa-github', url: 'https://github.com/bee1oss' },
-    { icon: 'fab fa-twitter', url: 'https://x.com/BHajyyev' },
+    { icon: 'fab fa-x-twitter', url: 'https://x.com/BHajyyev' },
     {
       icon: 'fab fa-instagram',
       url: 'https://www.instagram.com/bega.hw/profilecard/?igsh=MXg0NXJxY21xenduZw==',
