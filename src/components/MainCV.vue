@@ -22,7 +22,7 @@
       darkMode.value = true;
       document.documentElement.classList.add('dark-mode');
     }
-
+    //some
     nextTick(() => {
       const skillBars = document.querySelectorAll('.skill-progress');
       skillBars.forEach((bar) => {
