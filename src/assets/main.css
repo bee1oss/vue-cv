@@ -8,7 +8,7 @@
   --light-color: #ecf0f1;
   --dark-color: #2c3e50;
   --text-color: #333;
-  --text-light: #7f8c8d;
+  --text-light: #202324;
   --bg-color: #5d65d4;
   --card-bg: #ffffff;
   --header-bg: linear-gradient(135deg, var(--primary-color-hc), var(--secondary-color));
@@ -415,8 +415,9 @@ footer {
   text-align: center;
   padding: 30px;
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   margin-top: 50px;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {

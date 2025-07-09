@@ -17,14 +17,15 @@
 
   const skills: Skill[] = [
     { name: 'JavaScript', level: 85 },
+    { name: 'Node Js', level: 90 },
     { name: 'React', level: 80 },
     { name: 'Typescript', level: 85 },
     { name: 'Java', level: 80 },
     { name: 'C#', level: 75 },
     { name: 'C++', level: 85 },
-    { name: 'Php', level: 70 },
+    { name: 'Php', level: 80 },
     { name: 'Rust', level: 65 },
-    { name: 'Rust', level: 65 },
+    { name: 'Go', level: 70 },
     { name: 'HTML/CSS', level: 90 },
   ];
 
@@ -38,13 +39,17 @@
     { name: 'Vue.js', icon: 'fab fa-vuejs' },
     { name: 'React', icon: 'fab fa-react' },
     { name: 'React Native (Expo)', icon: 'fab fa-react' },
-    { name: 'Node.js', icon: 'fab fa-node-js' },
     { name: 'Express.js', icon: 'fas fa-server' },
     { name: 'NestJS', icon: 'fas fa-cubes' },
     { name: 'Laravel', icon: 'fas fa-terminal' }, // Pro ikon yerine alternatif
     { name: 'Spring Boot', icon: 'fas fa-leaf' },
     { name: 'Go Fiber', icon: 'fas fa-feather' },
-    { name: 'PHP', icon: 'fab fa-php' },
+  ];
+
+  const databases = [
+    { name: 'MongoDB', icon: 'fas fa-database' }, // NoSQL
+    { name: 'PostgreSQL', icon: 'fas fa-database' }, // SQL
+    { name: 'MySQL', icon: 'fas fa-database' },
   ];
 </script>
 
@@ -68,6 +73,10 @@
           <div class="skill-progress" :style="{ width: `${skill.level}%` }"></div>
         </div>
       </div>
+    </div>
+    <div class="info-item">
+      <h2>Veritabanlari</h2>
+      <p v-for="db in databases" :key="db.name"><i :class="db.icon"></i> {{ db.name }}</p>
     </div>
 
     <div class="info-item">

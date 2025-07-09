@@ -9,11 +9,13 @@
 
   const darkMode = ref(false);
 
+  // Tema izleme
   watch(darkMode, (newVal) => {
     localStorage.setItem('theme', newVal ? 'dark' : 'light');
     document.documentElement.classList.toggle('dark-mode', newVal);
   });
 
+  // Sayfa yüklendiğinde çalışır
   onMounted(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -24,11 +26,13 @@
     nextTick(() => {
       const skillBars = document.querySelectorAll('.skill-progress');
       skillBars.forEach((bar) => {
-        const width = bar.getAttribute('data-width') || bar.style.width;
-        bar.style.width = '0';
-        setTimeout(() => {
-          bar.style.width = width;
-        }, 100);
+        if (bar instanceof HTMLElement) {
+          const width = bar.getAttribute('data-width') || bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 100);
+        }
       });
     });
   });
