@@ -69,48 +69,65 @@
 </script>
 
 <template>
-  <aside class="sidebar">
-    <div class="info-item">
-      <h2>İletişim</h2>
-      <p><i class="fas fa-envelope"></i> {{ contactInfo.email }}</p>
-      <p><i class="fas fa-phone"></i> {{ contactInfo.phone }}</p>
-      <p><i class="fas fa-map-marker-alt"></i> {{ contactInfo.location }}</p>
-    </div>
-
-    <div class="info-item">
-      <h2>Yetenekler</h2>
-      <div class="skill-item" v-for="skill in skills" :key="skill.name">
-        <div class="skill-name">
-          <span>{{ skill.name }}</span>
-          <span>{{ skill.level }}%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" :style="{ width: `${skill.level}%` }"></div>
+  <div class="main-container">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="info-item">
+          <h2>İletişim</h2>
+          <p><i class="fas fa-envelope"></i> {{ contactInfo.email }}</p>
+          <p><i class="fas fa-phone"></i> {{ contactInfo.phone }}</p>
+          <p><i class="fas fa-map-marker-alt"></i> {{ contactInfo.location }}</p>
         </div>
       </div>
-    </div>
-    <div class="info-item">
-      <h2>Veritabanları</h2>
-      <p v-for="db in databases" :key="db.name"><i :class="db.icon"></i> {{ db.name }}</p>
-    </div>
 
-    <div class="info-item">
-      <h2>Frameworks</h2>
-      <p v-for="fram in frameworks" :key="fram.name"><i :class="fram.icon"></i> {{ fram.name }}</p>
-    </div>
+      <div class="sidebar-card">
+        <div class="info-item">
+          <h2>Yetenekler</h2>
+          <div class="skill-item" v-for="skill in skills" :key="skill.name">
+            <div class="skill-name">
+              <span>{{ skill.name }}</span>
+              <span>{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" :style="{ width: `${skill.level}%` }"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div class="info-item">
-      <h2>Güvenlik Araçları</h2>
-      <p v-for="sec in websec" :key="sec.name"><i :class="sec.icon"></i> {{ sec.name }}</p>
-    </div>
+      <div class="sidebar-card">
+        <div class="info-item">
+          <h2>Veritabanları</h2>
+          <p v-for="db in databases" :key="db.name"><i :class="db.icon"></i> {{ db.name }}</p>
+        </div>
+      </div>
 
-    <div class="info-item">
-      <h2>Yabancı Diller</h2>
-      <p v-for="lang in languages" :key="lang.name">
-        <i class="fas fa-language"></i> {{ lang.name }} - {{ lang.level }}
-      </p>
-    </div>
-  </aside>
+      <div class="sidebar-card">
+        <div class="info-item">
+          <h2>Frameworks</h2>
+          <p v-for="fram in frameworks" :key="fram.name">
+            <i :class="fram.icon"></i> {{ fram.name }}
+          </p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="info-item">
+          <h2>Güvenlik Araçları</h2>
+          <p v-for="sec in websec" :key="sec.name"><i :class="sec.icon"></i> {{ sec.name }}</p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="info-item">
+          <h2>Yabancı Diller</h2>
+          <p v-for="lang in languages" :key="lang.name">
+            <i class="fas fa-language"></i> {{ lang.name }} - {{ lang.level }}
+          </p>
+        </div>
+      </div>
+    </aside>
+  </div>
 </template>
 
 <style scoped lang="scss">

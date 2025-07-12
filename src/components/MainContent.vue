@@ -129,14 +129,14 @@ Yazılım dünyasındaki yolculuğumda hem yeni teknolojileri öğrenmeye hem de
 </script>
 
 <template>
-  <main class="main-section">
-    <section>
+  <main>
+    <section class="section">
       <h2>Hakkımda</h2>
       <p v-html="aboutText.replace(/\n/g, '<br>')"></p>
       <br />
     </section>
 
-    <section>
+    <section class="section">
       <h2>Deneyim</h2>
       <div class="timeline">
         <div class="timeline-item" v-for="exp in experience" :key="exp.title">
@@ -150,7 +150,7 @@ Yazılım dünyasındaki yolculuğumda hem yeni teknolojileri öğrenmeye hem de
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Eğitim</h2>
       <div class="timeline">
         <div class="timeline-item" v-for="edu in education" :key="edu.title">
@@ -162,7 +162,7 @@ Yazılım dünyasındaki yolculuğumda hem yeni teknolojileri öğrenmeye hem de
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Projeler</h2>
       <div class="project-card" v-for="project in projects" :key="project.title">
         <h3>{{ project.title }}</h3>
