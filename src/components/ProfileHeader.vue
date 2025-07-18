@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import profileImage from '../assets/bega.png';
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
 
   const socialLinks = [
     { icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/begech-hajyyev-675887272/' },
@@ -16,7 +18,7 @@
   <header>
     <img :src="profileImage" alt="Profil Fotoğrafı" class="profile-img" />
     <h1>Begench Hajyyev</h1>
-    <p class="title">Software Engineer / Web Security</p>
+    <p class="title">{{ t('profileTitle') }}</p>
     <div class="social-links">
       <a
         v-for="link in socialLinks"

@@ -1,22 +1,23 @@
 <script setup lang="ts">
+  import { computed } from 'vue';
+  import { useI18n } from 'vue-i18n';
+
+  const { t, tm } = useI18n();
+
+  const languages = computed(() => tm('languages') as { name: string; level: string }[]);
   interface Skill {
     name: string;
     level: number;
   }
 
-  interface Language {
-    name: string;
-    level: string;
-  }
-
   const contactInfo = {
     email: 'begahaciyew@gmail.com',
     phone: '+90 548 825 35 27',
-    location: 'Lefkoşa, Kıbrıs',
   };
 
   const skills: Skill[] = [
     { name: 'Linux', level: 70 },
+    { name: 'Network', level: 70 },
     { name: 'Git', level: 85 },
     { name: 'JavaScript', level: 85 },
     { name: 'Node Js', level: 90 },
@@ -31,12 +32,6 @@
     { name: 'HTML/CSS', level: 90 },
   ];
 
-  const languages: Language[] = [
-    { name: 'Türkçe', level: 'Ana Dil' },
-    { name: 'Türkmence', level: 'Ana Dil' },
-    { name: 'Rusca', level: 'İleri Seviye' },
-    { name: 'İngilizce', level: 'Orta Seviye' },
-  ];
   const frameworks = [
     { name: 'Vue.js', icon: 'fab fa-vuejs' },
     { name: 'React', icon: 'fab fa-react' },
@@ -73,16 +68,16 @@
     <aside class="sidebar">
       <div class="sidebar-card">
         <div class="info-item">
-          <h2>İletişim</h2>
+          <h2>{{ t('contact') }}</h2>
           <p><i class="fas fa-envelope"></i> {{ contactInfo.email }}</p>
           <p><i class="fas fa-phone"></i> {{ contactInfo.phone }}</p>
-          <p><i class="fas fa-map-marker-alt"></i> {{ contactInfo.location }}</p>
+          <p><i class="fas fa-map-marker-alt"></i> {{ t('location') }}</p>
         </div>
       </div>
 
       <div class="sidebar-card">
         <div class="info-item">
-          <h2>Yetenekler</h2>
+          <h2>{{ t('skills') }}</h2>
           <div class="skill-item" v-for="skill in skills" :key="skill.name">
             <div class="skill-name">
               <span>{{ skill.name }}</span>
@@ -97,14 +92,14 @@
 
       <div class="sidebar-card">
         <div class="info-item">
-          <h2>Veritabanları</h2>
+          <h2>{{ t('databases') }}</h2>
           <p v-for="db in databases" :key="db.name"><i :class="db.icon"></i> {{ db.name }}</p>
         </div>
       </div>
 
       <div class="sidebar-card">
         <div class="info-item">
-          <h2>Frameworks</h2>
+          <h2>{{ t('frameworks') }}</h2>
           <p v-for="fram in frameworks" :key="fram.name">
             <i :class="fram.icon"></i> {{ fram.name }}
           </p>
@@ -113,14 +108,14 @@
 
       <div class="sidebar-card">
         <div class="info-item">
-          <h2>Güvenlik Araçları</h2>
+          <h2>{{ t('securityTools') }}</h2>
           <p v-for="sec in websec" :key="sec.name"><i :class="sec.icon"></i> {{ sec.name }}</p>
         </div>
       </div>
 
       <div class="sidebar-card">
         <div class="info-item">
-          <h2>Yabancı Diller</h2>
+          <h2>{{ t('languagesTitle') }}</h2>
           <p v-for="lang in languages" :key="lang.name">
             <i class="fas fa-language"></i> {{ lang.name }} - {{ lang.level }}
           </p>
