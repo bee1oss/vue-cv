@@ -5,7 +5,6 @@
   import SidebarInfo from './SidebarInfo.vue';
   import MainContent from './MainContent.vue';
   import { useI18n } from 'vue-i18n';
-  import { useHead } from '@vueuse/head';
 
   const { t } = useI18n();
 
@@ -41,53 +40,6 @@
         }
       });
     });
-  });
-
-  useHead({
-    title: 'Begench Hajyyev | Full Stack Yazılım Geliştirici',
-    meta: [
-      {
-        name: 'description',
-        content:
-          'Full stack yazılım geliştirici, web güvenliği uzmanı ve mobil uygulama geliştiricisi. Projelerime göz atın!',
-      },
-      {
-        name: 'keywords',
-        content:
-          'Begench Hajyyev, yazılım geliştirici, full stack, Vue, TypeScript, Node.js, NestJS, web güvenliği, React Native, freelance',
-      },
-      { name: 'author', content: 'Begench Hajyyev' },
-      { name: 'robots', content: 'index, follow' },
-
-      // Open Graph for social media (Facebook, LinkedIn)
-      { property: 'og:type', content: 'website' },
-      { property: 'og:title', content: 'Begench Hajyyev | Full Stack Yazılım Geliştirici' },
-      {
-        property: 'og:description',
-        content: 'Web güvenliği ve yazılım geliştirme konularındaki projelerime göz atın!',
-      },
-      { property: 'og:image', content: 'https://seninsiten.com/images/preview.jpg' }, // Örnek görsel URL
-      { property: 'og:url', content: 'https://seninsiten.com' },
-
-      // Twitter Card
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Begench Hajyyev | Full Stack Developer' },
-      {
-        name: 'twitter:description',
-        content:
-          'Yazılım projelerimi inceleyin. Web, mobil ve oyun geliştirme konularında çalışmalar.',
-      },
-      { name: 'twitter:image', content: 'https://seninsiten.com/images/preview.jpg' }, // Aynı görsel
-
-      // Language
-      { name: 'language', content: 'tr' }, // veya dynamic olarak locale.value
-    ],
-    link: [
-      {
-        rel: 'canonical',
-        href: 'https://seninsiten.com', // senin gerçek domaininle değiştir
-      },
-    ],
   });
 </script>
 

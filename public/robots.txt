@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://begench.dev/sitemap.xml
+Sitemap: https://begench.com/sitemap.xml

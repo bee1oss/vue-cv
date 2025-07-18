@@ -34,8 +34,9 @@
   <main>
     <section class="section">
       <h2>{{ t('aboutMeTitle') }}</h2>
-      <p v-html="aboutText.replace(/\n/g, '<br>')"></p>
-      <br />
+      <p>
+        <span v-for="(line, index) in aboutText.split('\n')" :key="index"> {{ line }}<br /> </span>
+      </p>
     </section>
 
     <section class="section">
