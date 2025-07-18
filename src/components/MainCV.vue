@@ -44,23 +44,48 @@
   });
 
   useHead({
-    title: 'Begench Hajyyev | Yazılım Geliştirici',
+    title: 'Begench Hajyyev | Full Stack Yazılım Geliştirici',
     meta: [
       {
         name: 'description',
-        content: 'Full stack yazılım geliştirici, web güvenliği ve mobil uygulama uzmanı.',
+        content:
+          'Full stack yazılım geliştirici, web güvenliği uzmanı ve mobil uygulama geliştiricisi. Projelerime göz atın!',
       },
       {
         name: 'keywords',
-        content: 'Vue, TypeScript, Yazılım Geliştirici, Full Stack, Web Güvenliği, Freelance',
+        content:
+          'Begench Hajyyev, yazılım geliştirici, full stack, Vue, TypeScript, Node.js, NestJS, web güvenliği, React Native, freelance',
       },
-      {
-        property: 'og:title',
-        content: 'Begench Hajyyev | Yazılım Geliştirici',
-      },
+      { name: 'author', content: 'Begench Hajyyev' },
+      { name: 'robots', content: 'index, follow' },
+
+      // Open Graph for social media (Facebook, LinkedIn)
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: 'Begench Hajyyev | Full Stack Yazılım Geliştirici' },
       {
         property: 'og:description',
-        content: 'Portföy siteme hoş geldiniz. Yazılım projelerimi inceleyin.',
+        content: 'Web güvenliği ve yazılım geliştirme konularındaki projelerime göz atın!',
+      },
+      { property: 'og:image', content: 'https://seninsiten.com/images/preview.jpg' }, // Örnek görsel URL
+      { property: 'og:url', content: 'https://seninsiten.com' },
+
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Begench Hajyyev | Full Stack Developer' },
+      {
+        name: 'twitter:description',
+        content:
+          'Yazılım projelerimi inceleyin. Web, mobil ve oyun geliştirme konularında çalışmalar.',
+      },
+      { name: 'twitter:image', content: 'https://seninsiten.com/images/preview.jpg' }, // Aynı görsel
+
+      // Language
+      { name: 'language', content: 'tr' }, // veya dynamic olarak locale.value
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://seninsiten.com', // senin gerçek domaininle değiştir
       },
     ],
   });
